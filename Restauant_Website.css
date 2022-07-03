@@ -1,0 +1,225 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    position: relative;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.row::after{
+    display: table;
+    clear: both;
+    content: "";
+}
+.col-1 {width: 8.33%}
+.col-2 {width:16.66%}
+.col-3 {width:25%}
+.col-4 {width:33.33%}
+.col-5 {width:41.66%}
+.col-6 {width:50%}
+.col-7 {width:58.33%}
+.col-8 {width:66.66%}
+.col-9 {width:75%}
+.col-10 {width:83.33%}
+.col-11 {width:91.66%}
+.col-12 {width:100%}
+
+/* #### Section-1 #### */
+
+.Section-1 {
+    height: 100vh;
+    text-align: center;
+    background-image: url(img/Secton-1_img-1.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.Section-1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height:100vh;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: inset 120px 100px 250px #000, inset -120px -100px 250px #000;
+}
+.Section-1 div.Section-1_inner{
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+.Section-1 a {
+    line-height: 50px;
+    font-size: 18px;
+    padding: 15px;
+}
+.Section-1 h1 {
+    margin: 0;
+    padding: 15% 0;
+    font-size: 52px;
+    color: #fff;
+    z-index: 2;
+}
+.Section-1 a:hover {
+    text-decoration: underline;
+}
+.Section-1 a.button {
+    font-size: 16px;
+    border: 1px solid;
+}
+.Section-1 a.button:hover {
+    text-decoration: none;
+    background-color: #fff;
+    color: #000000;
+}
+
+/* #### Section-2 #### */
+
+.Section-2 {
+    padding: 5% 20%;
+    display: block;
+    font-size: 22px ;
+    text-align: center;
+}
+.Section-2 p,
+.Section-2 h3{
+    color: #000000;
+    margin: 0;
+    line-height: 32px;
+}
+
+/* #### Section-3 #### */
+
+.Section-3{
+    display: flex;
+    overflow: hidden;
+}
+.Section-3 a{
+    margin: auto;
+    color: #000000;
+}
+.Section-3 a.left-arrow{
+    margin-right: 1%;
+}
+.Section-3 a.right-arrow{
+    margin-left: 1%;
+}
+.Section-3 a:hover{
+    margin: auto;
+}
+.Section-3 img {
+    display: none;
+    padding: 0.5% 0.5%;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* #### Section-4 #### */
+
+.Section-4 {
+    overflow: hidden;
+    display: block;
+}
+.Section-4 .row {
+    padding: 2% 15%;
+    align-content: flex-start;
+}
+.Section-4 .row .col-3 {
+    height: 319px;
+    padding-right: 5%;
+    
+}
+.Section-4 .row .col-3 p{
+    margin: 0;
+    line-height: 32px;
+    font-size: 22px;
+}
+.Section-4 .row .col-3 button {
+    border: 0;
+    padding: 5px 10px;
+    background-color: #9C9C9C;
+    float: left;
+    border-radius: 10%;
+}
+.Section-4 .row .col-3 button:hover{
+    background-color: #7F7E7E;
+}
+.Section-4 .row .col-3 button a{
+    line-height: 20px;
+    font-size: 14px;
+    border: 0;
+}
+.Section-4 .row .col-3 input {
+    padding-left: 10px;
+    height: 26px;
+    width: 100%;
+}
+
+/* #### On Click #### */
+ 
+.Section-3 img.img-click1,
+.Section-3 img.img-click2,
+.Section-3 img.img-click3 {
+    display: block;
+}
+
+/* #### Mobile Responsive #### */
+
+@media screen and (max-width: 600px){
+    .Section-1 h1 {
+        padding: 5% 0;
+        padding-bottom: 10%;
+        font-size: 32px;
+    }
+    .Section-2 {
+        padding: 5% 22% ;
+    }
+    .Section-2 p,
+    .Section-2 h3 {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .Section-4 .row {
+        padding: 1% ;
+    }
+    .Section-4 .row .col-3 {
+        text-align: center;
+    }
+    .Section-4 .row .col-3 p{
+        line-height: 32px;
+        font-size: 16px;
+    }
+    .Section-4 .row .col-3 p.float{
+        line-height: 32px;
+        font-size: 16px;
+        float: left;
+    }
+}
+@media screen and (max-width: 1000px){
+    .Section-4 {
+        overflow: hidden;
+    }
+    .Section-4 .row {
+        padding: 1% 5%;
+    }
+    .Section-4 .row .col-3 {
+        padding: 2% 0;
+        height: 100%;
+        width: 100%;
+    }
+    .Section-4 .row .col-3 input {
+        width: 400px;
+        float: left;
+    }
+}
